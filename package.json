@@ -1,19 +1,35 @@
 {
   "name": "task-maneger-api",
   "version": "1.0.0",
-  "description": "api",
+  "description": "RESTful API for task management and watchlist with JWT authentication",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "keywords": [
+    "api",
+    "express",
+    "jwt",
+    "authentication",
+    "watchlist",
+    "task-manager"
+  ],
+  "author": "Prakash vyawhare",
   "license": "ISC",
   "dependencies": {
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.6",
+    "dotenv": "^16.3.1",
     "express": "^5.2.1",
-    "jsonwebtoken": "^9.0.3",
-    "nodeman": "^1.1.2"
+    "jsonwebtoken": "^9.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
   }
 }

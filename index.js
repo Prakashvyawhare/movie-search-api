@@ -48,11 +48,11 @@ app.post('/auth/refresh-token', (req,res) => {
             expiresIn:'1m'
         });
 
-        const newRefreshToken = jwt.sign({sub:payload.sub}, 'refresh_secret_key', {expiresIn:'15m'});
+        const newRefreshToken = jwt.sign({sub:payload.sub}, 'refresh_secret_key', {expiresIn:'60m'});
          res.cookie('refreshToken', newRefreshToken, {
             secure:true,
             sameSite: 'strict',
-            maxAge: 5*60*1000
+            maxAge: 60*60*1000
          });
         res.status(200).json({accessToken: nerAccessToken})
 
