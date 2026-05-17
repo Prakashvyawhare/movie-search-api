@@ -5,16 +5,16 @@ const logger = require('../utils/logger');
 
 const login = (req, res) => {
   try {
-    const { username } = req.body;
+    const { email } = req.body;
 
-    if (!username) {
+    if (!email) {
       return res.status(400).json({
         success: false,
-        error: 'Username is required',
+        error: 'email is required',
       });
     }
 
-    const result = authService.login(username);
+    const result = authService.login(email);
 
     if (!result.success) {
       return res.status(401).json({

@@ -40,7 +40,7 @@ const getWatchlist = (userId) => {
 const removeFromWatchlist = (entryId, userId) => {
   try {
     const watchlist = Watchlist.getByUserId(userId);
-    const exists = watchlist.some(item => item.id === entryId);
+    const exists = watchlist.some(item => item.movie?.movie?.imdbID === entryId);
 
     if (!exists) {
       logger.warn(`Watchlist entry not found: ${entryId}`);

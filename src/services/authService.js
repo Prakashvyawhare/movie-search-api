@@ -7,7 +7,7 @@ const {
 
 const login = (username) => {
   try {
-    const user = User.findByName(username);
+    const user = User.findByEmail(username);
 
     if (!user) {
       logger.warn(`Login failed: User not found - ${username}`);
